@@ -77,32 +77,44 @@ a:hover {
 body,
 td,
 th,
-tr,
 p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+a,
+li,
+td,
+span,
+div {
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px; /* Increased from 16px */
+  line-height: 1.8; /* Increased for better readability with larger text */
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+h1, h2, h3, h4, h5, h6,
+heading,
+.section-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700
+strong,
+b,
+.highlight {
+  font-weight: 600;
 }
 
 name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 5px 0; /* Reduced margin around the name */
+}
+
+papertitle {
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px; /* Increased from 16px */
+  font-weight: 700;
+  line-height: 1.8; /* Added for better readability */
 }
 
 .one {
@@ -128,4 +140,290 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* Research Section Styling */
+#research-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0 15px 0; /* Reduced vertical padding */
+}
+
+#research-section p {
+  width: 100%;
+  margin: 5px 0 10px 0; /* Further reduced margins */
+  line-height: 1.5; /* Slightly reduced line height */
+}
+
+#research-section .research-item {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Research section heading now uses .section-title class */
+
+/* Education Section Styling */
+.education-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5px 0 0;
+}
+
+.education-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(33.33% - 14px);
+  padding: 5px 0;
+  margin: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.education-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 0 5px 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Oracle logo specific styling */
+.education-item img[alt="Oracle Cloud"] {
+  width: 180px;
+  height: 100px;
+  margin: -10px 0 -5px 0;
+}
+
+.education-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.education-degree {
+  font-weight: 600;
+  font-size: 0.95em;
+  margin: 0 0 1px 0;
+  color: #2c3e50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.education-institution {
+  font-weight: 500;
+  color: #555;
+  margin: 0 0 1px 0;
+  font-size: 0.85em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.education-year {
+  color: #7f8c8d;
+  font-size: 0.8em;
+  margin: 0;
+  font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .education-item {
+    width: calc(50% - 10px);
+    max-width: 100%;
+    padding: 4px 0;
+  }
+  
+  .education-grid {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 3px;
+  }
+  
+  .education-item img[alt="Oracle Cloud"] {
+    width: 100px;
+    height: 100px;
+    margin: -5px 0 5px 0;
+  }
+  
+  .education-degree {
+    font-size: 0.95em;
+  }
+  
+  .education-institution {
+    font-size: 0.85em;
+  }
+  
+  .education-year {
+    font-size: 0.8em;
+  }
+}
+
+
+/* News Section Styling */
+.section-title {
+  color: #2c3e50;
+  font-size: 1.8em; /* Slightly smaller font size */
+  margin: 0.5rem 0 0.75rem 0; /* Reduced margins */
+  padding: 0; /* Removed padding */
+  display: block;
+  border-bottom: none;
+}
+
+.news-container {
+  margin-top: 1rem;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  border-left: 3px solid #f0f0f0;
+}
+
+.news-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+}
+
+.news-date {
+  min-width: 110px; /* Increased to accommodate larger text */
+  font-weight: 600;
+  color: #3498db;
+  margin-right: 1.2rem; /* Increased margin for better spacing */
+  font-size: 1em; /* Increased from 0.9em */
+  align-self: flex-start;
+  padding-top: 4px; /* Slightly increased padding */
+}
+
+.news-content {
+  flex: 1;
+  line-height: 1.8; /* Increased from 1.5 */
+  color: #444;
+  font-size: 1em; /* Increased from 0.95em */
+  margin: 8px 0; /* Added vertical margin for better spacing */
+}
+
+.news-link {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.news-link:hover {
+  color: #1a5276;
+  text-decoration: underline;
+}
+
+/* Read More Button Styles */
+.read-more-container {
+  text-align: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.read-more-btn {
+  background: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  font-size: 0.9em;
+}
+
+.read-more-btn:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.read-more-btn:active {
+  transform: translateY(0);
+}
+
+/* Fade effect for hidden news items */
+.more-news {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease, border-left-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  display: flex !important; /* Ensure consistent layout */
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.more-news.visible {
+  opacity: 1;
+  max-height: 200px; /* Adjust based on your content */
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid #f0f0f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: opacity 0.5s ease, max-height 0.5s ease, border-left-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Ensure hover effects work for all news items */
+.news-item:hover,
+.more-news.visible:hover {
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+}
+
+.highlight {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-item {
+    flex-direction: column;
+  }
+  
+  .news-date {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
 }
